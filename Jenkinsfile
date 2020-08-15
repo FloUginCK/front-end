@@ -1,14 +1,10 @@
 pipeline {
-  agent {
-    node {
-      label 'nodejs 4.8.6'
-    }
-
-  }
+  agent any
   stages {
     stage('build') {
       steps {
         sh 'npm install'
+        nodejs 'nodejs 4.8.6'
       }
     }
 

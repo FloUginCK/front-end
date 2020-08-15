@@ -1,8 +1,6 @@
 pipeline {
   agent any
-  tools {
-    maven 'nodejs 4.8.6'
-  }
+
   stages {
     stage('build') {
       steps {
@@ -18,7 +16,7 @@ pipeline {
 
     stage('package') {
       steps {
-        sh 'npt run package'
+        sh 'npm run package'
       }
     }
 

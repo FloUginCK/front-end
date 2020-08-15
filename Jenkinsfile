@@ -1,6 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'nodejs 4.8.6'
+    }
 
+  }
   stages {
     stage('build') {
       steps {
